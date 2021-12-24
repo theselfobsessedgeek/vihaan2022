@@ -160,170 +160,72 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
               ]
             : [],
       ),
-      body: ScreenTypeLayout.builder(
-        mobile: (BuildContext context) => SingleChildScrollView(
-          controller: _controller,
-          child: Column(
-            children: [
-              _wrapScrollTag(
-                index: 0,
-                child: LandingPage(),
-              ),
-              _wrapScrollTag(
-                index: 1,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
+      body: ResponsiveBuilder(
+        builder: (context, sizingInformation) {
+          if (sizingInformation.deviceScreenType != DeviceScreenType.watch) {
+            return SingleChildScrollView(
+              controller: _controller,
+              child: Column(
+                children: [
+                  _wrapScrollTag(
+                    index: 0,
+                    child: const LandingPage(),
                   ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 2,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
+                  _wrapScrollTag(
+                    index: 1,
+                    child: Container(
+                      color: Colors.red,
+                      constraints: BoxConstraints(
+                        minHeight: _size.height,
+                        minWidth: _size.width,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 3,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
+                  _wrapScrollTag(
+                    index: 2,
+                    child: Container(
+                      color: Colors.purple,
+                      constraints: BoxConstraints(
+                        minHeight: _size.height,
+                        minWidth: _size.width,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 4,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
+                  _wrapScrollTag(
+                    index: 3,
+                    child: Container(
+                      color: Colors.red,
+                      constraints: BoxConstraints(
+                        minHeight: _size.height,
+                        minWidth: _size.width,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        tablet: (BuildContext context) => SingleChildScrollView(
-          controller: _controller,
-          child: Column(
-            children: [
-              _wrapScrollTag(
-                index: 0,
-                child: LandingPage(),
-              ),
-              _wrapScrollTag(
-                index: 1,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
+                  _wrapScrollTag(
+                    index: 4,
+                    child: Container(
+                      color: Colors.purple,
+                      constraints: BoxConstraints(
+                        minHeight: _size.height,
+                        minWidth: _size.width,
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-              _wrapScrollTag(
-                index: 2,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 3,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 4,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        desktop: (BuildContext context) => SingleChildScrollView(
-          controller: _controller,
-          child: Column(
-            children: [
-              _wrapScrollTag(
-                index: 0,
-                child: LandingPage(),
-              ),
-              _wrapScrollTag(
-                index: 1,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 2,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 3,
-                child: Container(
-                  color: Colors.red,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-              _wrapScrollTag(
-                index: 4,
-                child: Container(
-                  color: Colors.purple,
-                  constraints: BoxConstraints(
-                    minHeight: _size.height,
-                    minWidth: _size.width,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        watch: (BuildContext context) => Container(
-          color: Theme.of(context).primaryColor,
-          constraints: BoxConstraints(
-            minHeight: _size.height,
-            minWidth: _size.width,
-          ),
-          child: const Center(
-            child: Text("Vihaan #5.0"),
-          ),
-        ),
+            );
+          }
+          return Container(
+            color: Theme.of(context).primaryColor,
+            constraints: BoxConstraints(
+              minHeight: _size.height,
+              minWidth: _size.width,
+            ),
+            child: const Center(
+              child: Text("Vihaan #5.0"),
+            ),
+          );
+        },
       ),
     );
   }

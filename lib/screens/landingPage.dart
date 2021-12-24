@@ -12,7 +12,16 @@ class LandingPage extends StatelessWidget {
     var _size = MediaQuery.of(context).size;
     var _deviceType = getDeviceType(_size);
     return Container(
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.blueAccent,
+          width: 2,
+        ),
+        color: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.all(
+          Radius.circular(kContainerRoundnessConstant),
+        ),
+      ),
       constraints: BoxConstraints(
         minHeight: _size.height,
         minWidth: _size.width,
@@ -29,7 +38,19 @@ class LandingPage extends StatelessWidget {
         children: [
           Visibility(
             visible: (_deviceType == DeviceScreenType.desktop),
-            child: Expanded(child: Image.network(vihaanImage)),
+            child: Expanded(
+              child: Image.network(
+                vihaanImage,
+                loadingBuilder: (context, child, loadingProgress) {
+                  return (loadingProgress == null)
+                      ? child
+                      : const Center(
+                          child: CircularProgressIndicator(),
+                        );
+                  // You can use LinearProgressIndicator or CircularProgressIndicator instead
+                },
+              ),
+            ),
           ),
           Expanded(
             child: Container(
@@ -37,12 +58,22 @@ class LandingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.network(vihaanImage),
+                  Image.network(
+                    vihaanImage,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      return (loadingProgress == null)
+                          ? child
+                          : const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                      // You can use LinearProgressIndicator or CircularProgressIndicator instead
+                    },
+                  ),
                   Container(
                     child: Column(
                       children: [
-                        Text("Vihaan Quote Goes Here!"),
-                        Text("Vihaan Dates Goes Here!"),
+                        const Text("Vihaan Quote Goes Here!"),
+                        const Text("Vihaan Dates Goes Here!"),
                         Wrap(
                           alignment: WrapAlignment.center,
                           crossAxisAlignment: WrapCrossAlignment.center,

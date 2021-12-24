@@ -1,8 +1,7 @@
-double kButtonRoundnessConstant = 30.0;
 double kLargeButtonPadding = 30.0;
 double kSmallButtonPadding = 5.0;
 
-double kContainerRoundnessConstant = 30.0;
+double kContainerRoundnessConstant = 15.0;
 
 double sectionHorizontalPadding(double width) {
   return width * 0.05;
