@@ -132,49 +132,89 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           onPressed: () {
                             _controller.scrollToIndex(1);
                           },
-                          child: const Text("About"),
+                          child: const Text(
+                            "About",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(2);
                           },
-                          child: const Text("Tracks"),
+                          child: const Text(
+                            "Tracks",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(3);
                           },
-                          child: const Text("Prizes"),
+                          child: const Text(
+                            "Prizes",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(4);
                           },
-                          child: const Text("Speakers"),
+                          child: const Text(
+                            "Speakers",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(5);
                           },
-                          child: const Text("Sponsors"),
+                          child: const Text(
+                            "Sponsors",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(6);
                           },
-                          child: const Text("Schedule"),
+                          child: const Text(
+                            "Schedule",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(7);
                           },
-                          child: const Text("FAQs"),
+                          child: const Text(
+                            "FAQs",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         TextButton(
                           onPressed: () {
                             _controller.scrollToIndex(8);
                           },
-                          child: const Text("Contact Us"),
+                          child: const Text(
+                            "Contact Us",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         const SizedBox(width: 10.0),
                       ]
@@ -190,45 +230,48 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
             if (sizingInformation.deviceScreenType != DeviceScreenType.watch) {
               return SingleChildScrollView(
                 controller: _controller,
-                child: Column(
-                  children: [
-                    _wrapScrollTag(
-                      index: 0,
-                      child: const LandingPage(),
-                    ),
-                    _wrapScrollTag(
-                      index: 1,
-                      child: AboutUs(),
-                    ),
-                    _wrapScrollTag(
-                      index: 2,
-                      child: Tracks(),
-                    ),
-                    _wrapScrollTag(
-                      index: 3,
-                      child: Prizes(),
-                    ),
-                    _wrapScrollTag(
-                      index: 4,
-                      child: Speakers(),
-                    ),
-                    _wrapScrollTag(
-                      index: 5,
-                      child: Sponsors(),
-                    ),
-                    _wrapScrollTag(
-                      index: 6,
-                      child: Timeline(),
-                    ),
-                    _wrapScrollTag(
-                      index: 7,
-                      child: FAQs(),
-                    ),
-                    _wrapScrollTag(
-                      index: 8,
-                      child: Footer(),
-                    ),
-                  ],
+                child: Container(
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      _wrapScrollTag(
+                        index: 0,
+                        child: const LandingPage(),
+                      ),
+                      _wrapScrollTag(
+                        index: 1,
+                        child: AboutUs(),
+                      ),
+                      _wrapScrollTag(
+                        index: 2,
+                        child: Tracks(),
+                      ),
+                      _wrapScrollTag(
+                        index: 3,
+                        child: Prizes(),
+                      ),
+                      _wrapScrollTag(
+                        index: 4,
+                        child: Speakers(),
+                      ),
+                      _wrapScrollTag(
+                        index: 5,
+                        child: Sponsors(),
+                      ),
+                      _wrapScrollTag(
+                        index: 6,
+                        child: Timeline(),
+                      ),
+                      _wrapScrollTag(
+                        index: 7,
+                        child: FAQs(),
+                      ),
+                      _wrapScrollTag(
+                        index: 8,
+                        child: Footer(),
+                      ),
+                    ],
+                  ),
                 ),
               );
             }

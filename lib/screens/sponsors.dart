@@ -9,7 +9,12 @@ class Sponsors extends StatelessWidget {
   Widget build(BuildContext context) {
     var _size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.yellow,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(
+          Radius.circular(kContainerRoundnessConstant),
+        ),
+      ),
       constraints: BoxConstraints(
         minHeight: _size.height,
         minWidth: _size.width,

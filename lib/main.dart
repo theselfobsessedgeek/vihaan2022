@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:vihaan2022/constants.dart';
 
 import 'screens/homepageWidget.dart';
 
@@ -18,6 +20,15 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
         primaryColor: const Color(0xffe3e5fe),
         backgroundColor: Colors.white,
+        textTheme: GoogleFonts.quicksandTextTheme(Theme.of(context).textTheme),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.black,
+            padding: EdgeInsets.all(kSmallButtonPadding),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(kButtonRoundnessConstant)),
+          ),
+        ),
       ),
       home: VihaanHomepageWidget(),
     );

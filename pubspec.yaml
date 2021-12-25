@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   responsive_builder: ^0.4.1
   scroll_to_index: ^2.1.1
+  google_fonts: ^2.1.1
 
 dev_dependencies:
   flutter_test:
