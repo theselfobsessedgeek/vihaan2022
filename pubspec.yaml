@@ -37,6 +37,7 @@ dependencies:
   responsive_builder: ^0.4.1
   scroll_to_index: ^2.1.1
   google_fonts: ^2.1.1
+  expansion_tile_card: ^2.0.0
 
 dev_dependencies:
   flutter_test:
