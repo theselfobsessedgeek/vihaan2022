@@ -9,6 +9,7 @@ import 'package:vihaan2022/screens/landingPage.dart';
 import 'package:vihaan2022/screens/prizes.dart';
 import 'package:vihaan2022/screens/speakers.dart';
 import 'package:vihaan2022/screens/sponsors.dart';
+import 'package:vihaan2022/screens/testimonial.dart';
 import 'package:vihaan2022/screens/timeline.dart';
 import 'package:vihaan2022/screens/tracks.dart';
 
@@ -134,6 +135,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "About",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -145,6 +147,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Tracks",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -156,6 +159,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Prizes",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -167,6 +171,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Speakers",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -178,6 +183,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Sponsors",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -189,6 +195,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Schedule",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -200,6 +207,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "FAQs",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -211,6 +219,7 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                           },
                           child: const Text(
                             "Contact Us",
+                            maxLines: 1,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -240,35 +249,36 @@ class _VihaanHomepageWidgetState extends State<VihaanHomepageWidget> {
                       ),
                       _wrapScrollTag(
                         index: 1,
-                        child: AboutUs(),
+                        child: const AboutUs(),
                       ),
                       _wrapScrollTag(
                         index: 2,
-                        child: Tracks(),
+                        child: const Tracks(),
                       ),
                       _wrapScrollTag(
                         index: 3,
-                        child: Prizes(),
+                        child: const Prizes(),
                       ),
                       _wrapScrollTag(
                         index: 4,
-                        child: Speakers(),
+                        child: const Speakers(),
                       ),
                       _wrapScrollTag(
                         index: 5,
-                        child: Sponsors(),
+                        child: const Sponsors(),
                       ),
+                      const Testimonial(),
                       _wrapScrollTag(
                         index: 6,
-                        child: Timeline(),
+                        child: const Timeline(),
                       ),
                       _wrapScrollTag(
                         index: 7,
-                        child: FAQs(),
+                        child: const FAQs(),
                       ),
                       _wrapScrollTag(
                         index: 8,
-                        child: Footer(),
+                        child: const Footer(),
                       ),
                     ],
                   ),

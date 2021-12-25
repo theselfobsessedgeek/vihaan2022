@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vihaan2022/constants.dart';
@@ -19,8 +20,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // primarySwatch: Colors.blue,
         primaryColor: const Color(0xffe3e5fe),
+        focusColor: const Color(0xff2069d6),
         backgroundColor: Colors.white,
-        textTheme: GoogleFonts.quicksandTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.quicksandTextTheme(Theme.of(context).textTheme)
+            .copyWith(
+                headline4: GoogleFonts.montserrat(
+          textStyle: Theme.of(context).textTheme.headline4,
+          color: const Color(0xff2069d6),
+          fontWeight: FontWeight.bold,
+        )),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: Colors.black,
